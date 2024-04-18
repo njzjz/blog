@@ -1,19 +1,608 @@
-<?xml version="1.0" encoding="utf-8"?><search><entry><title>The DeepModeling Manifesto</title><url>/blog/manifesto/</url><content><![CDATA[The integration of machine learning and physical modeling is changing the paradigm of scientific research. Those who hope to extend the frontier of science and solve challenging practical problems through computational modeling are coming together in new ways never seen before. This calls for a new infrastructure–new platforms for collaboration, new codingframeworks, new data processing schemes, and new ways of using the computing power.  It also calls for a new culture—the culture of working together closely for the benefit of all, of free exchange and sharing of knowledge and tools, of respect and appreciation of each other’s work, and of the pursuit of harmony among diversity.
+<?xml version="1.0" encoding="utf-8"?><search><entry><title>2022 CSI Workshop: Deep Modeling for Molecular Simulation</title><url>/blog/2022_csi_workshop/</url><content><![CDATA[Lecture 1: Deep Potential Method for Molecular Simulation, Roberto Car
+
+Lecture 2: Deep Potential at Scale, Linfeng Zhang
+
+Lecture 3: Towards a Realistic Description of H3O+ and OH- Transport, Robert A. DiStasio Jr.
+
+Lecture 4: Next Generation Quantum and Deep Learning Potentials, Darrin York
+
+Lecture 5: Linear Response Theory of Transport in Condensed Matter, Stefano Baroni
+
+Lecture 6: Deep Modeling with Long-Range Electrostatic Interactions, Chunyi Zhang
+
+Hands-on session 4: Machine learning of Wannier centers and dipoles
+
+Hands-on session 5: Long range electrostatic interactions with DPLR
+
+Hands-on session 6: Concurrent learning with DP-GEN
+]]></content></entry><entry><title>OpenLAM | Visualization and Analysis of Learned Representations in DPA-2: Encoding Chemical and Configurational Information</title><url>/blog/OpenLAM-Visualization%20and%20Analysis%20of%20Learned%20Representations%20in%20DPA-2:%20Encoding%20Chemical%20and%20Configurational%20Information/</url><content><![CDATA[The slogan for OpenLAM is &quot;Conquer the Periodic Table!&quot; We hope to provide a new infrastructure for microscale scientific research and drive the transformation of microscale industrial design in fields such as materials, energy, and biopharmaceuticals by establishing an open-source ecosystem around large microscale models. Relevant models, data, and workflows will be consolidated around the AIS Square; related software development will take place in the DeepModeling open-source community. At the same time, we welcome open interaction from different communities in model development, data sharing, evaluation, and testing.
+See AIS Square for more details.
+
+
+Recently, we revealed a remarkable correspondence between the learned representations by DPA-2 and existing chemical knowledge and the periodic table. The DPA-2 representation effectively distinguishes between various chemical and configurational environments, atoms sharing similar chemical and configurational environments are closer in the representation space learned by the DPA-2 model. It underscores the potential of the proposed model architecture and the multi-task training scheme.
+
+We present a visualization of single-atom representations using a 2-dimensional t-SNE plot, as depicted in Fig.4. In Fig.4(a), colors denote distinct groups in the periodic table, as annotated in Fig.4(b). Notably, Fig.4(a) reveals that representations of identical chemical species tend to form cohesive clusters in the t-SNE latent space. The distribution of these representations distinctly aligns with known chemistry: The elements in groups IA and IIA are clustered at the top right of the t-SNE plot; The non-metals cluster predominantly at the top left and bottom; The transition metals, typically positioned at the middle of the periodic table, are accordingly situated in the central region of the t-SNE figure. However, hydrogen (H) presents an exception, exhibiting two clusters: one aligned with metals, primarily in water datasets, and another near non-metals, particularly in molecular datasets such as Drug, ANI-1x, and Transition-1x.
+Elements such as Copper (Cu), Silver (Ag), and Gold (Au) in group IB exhibit a tendency to cluster closer to Lithium (Li) than other transition metals due to their shared possession of one s-electron in the outermost electron shell. Similarly, representations of group IIA elements like Calcium (Ca) and Strontium (Sr) closely associate with those of group IIB elements such as Zinc (Zn) and Cadmium (Cd) owing to their shared possession of two s-electrons in the outermost electron shell. Additionally, there&#39;s a discernible trend for elements from the same group in the periodic table to cluster together, as evident with Phosphorus (P), Arsenic (As), and Antimony (Sb) from group VII, and Selenium (Se) and Tellurium (Te) from group VIII.
+The DPA-2 representation effectively distinguishes between various chemical and configurational environments, as showcased in Fig.4(c-e). In Fig.4(c), representations of Aluminum (Al) atoms from the Alloy and OC2M datasets are depicted. The color gradient from purple to yellow indicates the distance of the Al atom from the closest adsorbate in the OC2M dataset, while Al atoms from the Alloy dataset (all-metal environment) are colored red. Notably, Al atoms distanced from adsorbates closely resemble those in the Alloy dataset, indicative of similar chemical and configurational environments, whereas those in proximity to adsorbates exhibit discernible differences (see the red-circled blue cluster). Similarly, Fig.4(d) illustrates representations of Carbon (C) atoms in the Drug and OC2M datasets. Carbon atoms in adsorbates closer to catalyst materials are positioned farther away in latent space from representations in the Drug dataset due to more pronounced differences in their chemical and configurational environments.
+Moreover, the DPA-2 representation shows insensitivity to DFT labeling accuracy. As demonstrated in Fig.4(e), representations of sulfur (S) in SSE-PBE (labeled with PBE exchange correlation functional) and SSE-PBESol (labeled with PBE-Sol exchange correlation functional) datasets exhibit mutual overlap. The S atoms form two clusters, with one cluster indicating a phosphorus neighboring atom and the other representing a neighboring Si&#x2F;Ge&#x2F;Sn atom.
+In summary, our analysis reveals that atoms sharing similar chemical and configurational environments are closer in the representation space learned by the DPA-2 model. Thus, the DPA-2 representation emerges as a promising candidate for encoding chemical and configurational information in molecular and condensed-phase applications.
+]]></content><categories><category>OpenLAM</category></categories></entry><entry><title>The DeepModeling Manifesto</title><url>/blog/manifesto/</url><content><![CDATA[The integration of machine learning and physical modeling is changing the paradigm of scientific research. Those who hope to extend the frontier of science and solve challenging practical problems through computational modeling are coming together in new ways never seen before. This calls for a new infrastructure--new platforms for collaboration, new codingframeworks, new data processing schemes, and new ways of using the computing power.  It also calls for a new culture—the culture of working together closely for the benefit of all, of free exchange and sharing of knowledge and tools, of respect and appreciation of each other&#39;s work, and of the pursuit of harmony among diversity.
 The DeepModeling community is a community of such a group of people.
 
 
 What is DeepModeling?The two most important applications of computing are machine learning and physical modeling. The former is an effective tool for analyzing complex data; the latter is a scientific description of the physical world. The vitality boosted by the effective integration of the two is changing all aspects of scientific research. DeepModeling will ultimately be a set of methodologies and tools that combine machine learning, physical modeling, and cutting-edge computational platforms. People who are attracted by the DeepModeling community are attracted by its open, inclusive environment, as well as its dedication to the cause of advancing scientific computing worldwide.
-Why choose open source?There are different interpretations of the term “open source”. The consensus among the DeepModeling community is that open source is a collaborative software development platform based on the spirit of openness and sharing. Open source is a familiar concept for people in the fields of machine learning and computer science, but it is not yet popular in the field of scientific computing. What we advocate is that an algorithm or software should not be judged by the reputation of the journal in which it is published, but by its ability to solve real world problems and its actual contribution to science. The sustainable development of a software requires continuous investment in manpower. It should undergo incremental improvement, and it should be put to the test of solving real-world problems in an open environment. This is often difficult to achieve by individuals or individual groups. The open-source community provides better solutions. 
-The history of the DeepModeling communityThe “DeepModeling Community” started with the initiation of the “deepmd-kit” project. “deepmd-kit” is a software tool that combines machine learning and molecular dynamics, which helps to overcome a long-standing difficulty in the field of molecular dynamics, namely the dilemma of having to choose between efficiency and accuracy. The name “DeepModeling” was proposed by early developers of the deepmd-kit project, with the intention of using deep learning tools to solve the curse of dimensionality problem in multi-scale modeling. DeepModeling has therefore become the name of the GitHub organization (https://github.com/deepmodeling) which manages the original deepmd-kit project. After the development of deepmd-kit, the DeepModeling community has successively initiated projects such as dpdata, dp-gen, and dpdispatcher, and extended the modeling scale to electronic structure level through projects such as deepks-kit and ABACUS. These projects have brought together people from all over the world working on molecular simulations. 
+Why choose open source?There are different interpretations of the term &quot;open source&quot;. The consensus among the DeepModeling community is that open source is a collaborative software development platform based on the spirit of openness and sharing. Open source is a familiar concept for people in the fields of machine learning and computer science, but it is not yet popular in the field of scientific computing. What we advocate is that an algorithm or software should not be judged by the reputation of the journal in which it is published, but by its ability to solve real world problems and its actual contribution to science. The sustainable development of a software requires continuous investment in manpower. It should undergo incremental improvement, and it should be put to the test of solving real-world problems in an open environment. This is often difficult to achieve by individuals or individual groups. The open-source community provides better solutions. 
+The history of the DeepModeling communityThe &quot;DeepModeling Community&quot; started with the initiation of the &quot;deepmd-kit&quot; project. “deepmd-kit&quot; is a software tool that combines machine learning and molecular dynamics, which helps to overcome a long-standing difficulty in the field of molecular dynamics, namely the dilemma of having to choose between efficiency and accuracy. The name &quot;DeepModeling&quot; was proposed by early developers of the deepmd-kit project, with the intention of using deep learning tools to solve the curse of dimensionality problem in multi-scale modeling. DeepModeling has therefore become the name of the GitHub organization (https://github.com/deepmodeling) which manages the original deepmd-kit project. After the development of deepmd-kit, the DeepModeling community has successively initiated projects such as dpdata, dp-gen, and dpdispatcher, and extended the modeling scale to electronic structure level through projects such as deepks-kit and ABACUS. These projects have brought together people from all over the world working on molecular simulations. 
 The short-term plan and long-term vision of the DeepModeling communityIn the short term, developers in the DeepModeling community will focus on  atomic-scale simulation methods and tools. This includes solving the many-body Schrödinger equation, electronic structure calculation, molecular dynamics simulation, and coarse-grained molecular dynamics simulation. This also includes tasks such as data generation, model training, high-performance optimization, etc. In addition, it includes different workflows and management tools, as well as computing power scheduling tools for different systems, different scenarios, and different purposes. 
 It should be pointed out that the combination of physical modeling and machine learning often fundamentally changes the implementation logic of a piece of software. Therefore, the new infrastructure will not be settled once and for all, but will be gradually improved through an iterative process and  upgrades from time to time.
 In the long run, the DeepModeling community is committed to combining physical models at all scales with machine learning methods, using the most cutting-edge computing platforms to solve the most challenging scientific and technological problems faced by the human society.
-How can you contribute? If you want to contribute to an existing project in the DeepModeling community, please just do so or contactthe corresponding developer directly; if you want to open a new project in the DeepModeling community, or if you want the DeepModeling community to help develop your project, just contact &#99;&#111;&#110;&#116;&#x61;&#99;&#116;&#x40;&#x64;&#x65;&#101;&#112;&#x6d;&#x6f;&#100;&#101;&#x6c;&#105;&#x6e;&#103;&#x2e;&#x6f;&#114;&#103;.
+How can you contribute? If you want to contribute to an existing project in the DeepModeling community, please just do so or contactthe corresponding developer directly; if you want to open a new project in the DeepModeling community, or if you want the DeepModeling community to help develop your project, just contact &#99;&#111;&#110;&#x74;&#x61;&#99;&#116;&#64;&#x64;&#101;&#101;&#x70;&#x6d;&#x6f;&#x64;&#x65;&#108;&#105;&#x6e;&#103;&#x2e;&#x6f;&#114;&#103;.
 If you are a programmer who loves science and is attracted by the future scientific computing platform built by the DeepModeling community, you can contribute not only through new algorithms, but also code development specifications, document writing specifications, community databases, task scheduling, workflow management and other tools.  In addition, you can contribute to code architecture design and high-performance optimization tasks in the DeepModeling community. People in the field of scientific computing will greatly appreciate your expertise and contribution.
 If you are a hardcore developer familiar with topics such as electronic structure calculations, molecular dynamics, and finite element methods, the DeepModeling community will be your place to showcase your talents. The addition of machine learning components requires us to rethink about architecture design, each specific implementation for the tasks mentioned above and high-performance optimization. You will become important bridges that connect other developers, contributors, and users in different areas.
-If you have only used some basic scientific software and have worked on some post-processing scripts, the DeepModeling community also needs you. Try to ask questions and communicate on github/gitee and other communication platforms, try to give opinions, and try to fork, commit, pr… Your little by little contribution will make the DeepModeling community better and better, and the DeepModeling community will be very grateful for such contributions.
+If you have only used some basic scientific software and have worked on some post-processing scripts, the DeepModeling community also needs you. Try to ask questions and communicate on github&#x2F;gitee and other communication platforms, try to give opinions, and try to fork, commit, pr... Your little by little contribution will make the DeepModeling community better and better, and the DeepModeling community will be very grateful for such contributions.
 Even if you are just a bystander, if you support the concept of the DeepModeling community, your recognition and dissemination will also be a great encouragement and support for the DeepModeling community.
 Final remarksDespite the tremendous advances in AI and computing power, the scientific computing community is largely embedded in an old-fashioned culture. Many of the most important tasks rely on legacy codes. The core algorithms used in many commercial software have been outdated. The self-sufficient style of work is similar to that of the agricultural agesresulting in poor efficiency. It is only in recent years that some promising open-source communities have emerged. However, these communities are often aimed at specific tools for specific scales, and are often maintained by specific academic research groups. They face serious challenges in terms of continuous development and improved user experience.
 The DeepModeling project promises to change all that. 
 The combination of machine learning and physical modeling calls for a new paradigm, the open-source community paradigm. Such a paradigm has long been embraced in the computer and electronics industry, with Linux and Andriod being the very well-known examples. In this sense, what the DeepModeling project does is to borrow these ideas and use them for scientific computing. For people in computational science and engineering, efficient and reusable modeling tools that can be continuously improved will free researchers from the plight of no model or with only ad hoc models. For those who work on machine learning, the world of physical models will provide a relatively new and surely vast playground. Working together as an open-source community will make our work more productive, up to date, reliable, and transparent. The spirit of close collaboration, of respect and building on each other’s work will surely inspire more and more people to join the cause of advancing computing for the benefit of the human society. This is an exciting opportunity. This is the future of scientific computing!
-]]></content></entry></search>
+]]></content></entry><entry><title>OpenLAM | 2024 Q0 Report</title><url>/blog/openlam-2024Q0/</url><content><![CDATA[The slogan for OpenLAM is &quot;Conquer the Periodic Table!&quot; We hope to provide a new infrastructure for microscale scientific research and drive the transformation of microscale industrial design in fields such as materials, energy, and biopharmaceuticals by establishing an open-source ecosystem around large microscale models. Relevant models, data, and workflows will be consolidated around the AIS Square; related software development will take place in the DeepModeling open-source community. At the same time, we welcome open interaction from different communities in model development, data sharing, evaluation, and testing.
+See AIS Square for more details.
+
+
+Model Structure
+The DPA-2 model structure (PyTorch based) has been released, showing a significant increase in fitting and transferability compared to the DPA-1 (arxiv:2312.15492).
+A new capability for unsupervised denoise pretraining has been added (DOI:10.5281&#x2F;zenodo.10483908).
+
+Data
+The DPA-2 paper includes pretrained data for 18 systems and downstream data for 10 systems, covering over ten million frames and 73 elements (for detailed data inventory, see below; data can also be directly downloaded from DOI:10.5281&#x2F;zenodo.10483908).
+Four new datasets have been added for energy&amp;force data related to electrolytes, solid-state electrolytes, chemical reactions, and methane combustion (for details, see the data inventory below).
+Seven new datasets in equilibrium state for unsupervised denoising tasks have been added, including AFLOW, MC2D&#x2F;3D, CALYPSO, etc. (for details, see the data inventory below).
+
+Training Strategy
+The DPA-2 paper includes a multi-task pretraining framework for energy and force, supporting the combined training of datasets with different DFT settings.
+Unsupervised denoising task has been added, which is integrated into the multi-task pretraining framework (results are detailed below).
+
+Automation Process
+The DPA-2 paper encompasses an automated process for all stages of pretraining, fine-tuning, transferability testing, distillation, and compression (experience it at DP Combo and try it on the notebook).
+The AIS-Square website now includes an automated process for integrating user data, automatically determining the coverage of the pretrained model on current data.
+
+CompetitionComing in March...
+TeachingComing in February...
+Readers interested in the background of the project and details of the paper can also refer to the OpenLAM initiative and the DPA-2 paper for further information.
+ConclusionSince the release of DPA-2 less than a month ago, there have been numerous developments that can be summarized as follows:
+
+The DPA-2 multitask pre-training framework has added a new unsupervised training task: it is now possible to train with any data derived from different DFT calculations together, as well as denoise equilibrium state data without DFT labels, thereby learning a broader range of representation information;
+The OpenLAM initiative has incorporated more production-type data and integrated more publicly available equilibrium state crystal structure data, with the pre-training data pool continuing to expand rapidly;
+After incorporating the unsupervised training task, the overall energy prediction accuracy of the model is higher when compared fairly, indicating that information across different systems and tasks promotes mutual enhancement.
+
+The OpenLAM initiative is currently in rapid continuous iteration. As we move towards the era of large atomic models, open-source sharing becomes an inevitable theme. We welcome like-minded individuals to join, opening up new opportunities for broader scientific discoveries and industrial applications. On the journey to conquering the periodic table of elements, we look forward to creating a new era with you!To join the &quot;OpenLAM Initiative&quot;, visit AISSquare.
+Appendix
+Unsupervised Denoise Method
+Data Structure
+Equilibrium state data consisting only of configurations without DFT computational results; noise is added separately to the coordinates and types during preprocessing (such as adding Gaussian noise to coordinate positions and masking certain element types).
+
+
+Training Method
+Configurations with added noise are inputted into the network, processed by DPA-2&#39;s unified descriptor and denoise fitting, to yield a denoise vector for each atom (i.e., the network&#39;s prediction of the proper displacement) as well as the element types. After restoring the configuration and element types based on the denoise vector, a loss is computed against the true configurations and element types without noise. The model is trained by minimizing this loss.
+
+
+
+
+Data InventoryThe datasets currently used for training the DPA-2 model cover a wide range of systems including semiconductors, perovskites, alloys, surface catalysis, cathode materials, solid-state electrolytes, organic molecules, and more. This includes the newly added unsupervised equilibrium state Denoise datasets. All these data have been uploaded to the AISSquare website, where users can find more detailed data descriptions, as well as download and use the datasets, specifically including:
+Datasets included in the DPA-2 paper
+
+
+
+
+
+
+Index
+Dataset name
+Contributors
+
+
+
+1
+Alloy_DPA_v1_0
+Fuzhi Dai, Wanrun Jiang
+
+
+2
+Cathode(Anode)_DPA_v1_0
+Linshuang Zhang, Jianchuan Liu
+
+
+3
+Cluster_DPA_v1_0
+Fuqiang Gong
+
+
+4
+Drug(drug-like-molecule)_DPA_v1_0
+Manyi Yang
+
+
+5
+FerroEle_DPA_v1_0
+Jing Wu, Jiyuan Yang, YuanJinsheng Liu, Duo Zhang, Yudi Yang, Yuzhi Zhang, Linfeng Zhang, Shi Liu
+
+
+6
+Open_Catalyst_2020(OC20_Dataset)
+Duo Zhang
+
+
+7
+SSE-PBE_DPA_v1_0
+Jianxing Huang
+
+
+8
+SemiCond_DPA_v1_0
+Jianchuan Liu
+
+
+9
+H2O-PD_DPA_v1_0
+Linfeng Zhang, Han Wang, Roberto Car, Weinan E
+
+
+10
+AgAu-PBE(unitary)_DPA_v1_0
+Yinan Wang, LinFeng Zhang, Ben Xu, Xiaoyang Wang, Han Wang
+
+
+11
+AlMgCu_DPA_v1_0
+Wanrun Jiang, Yuzhi Zhang, Linfeng Zhang, Han Wang
+
+
+12
+Cu_DPA_v1_0
+Yuzhi Zhang, Haidi Wang, Weijie Chen, Jinzhe Zeng, Linfeng Zhang
+
+
+13
+Sn_DPA_v1_0
+Fengbo Yuan
+
+
+14
+Ti_DPA_v1_0
+Tongqi Wen, Rui Wang, Lingyu Zhu, Linfeng Zhang, Han Wang, David J Srolovitz, Zhaoxuan Wu
+
+
+15
+V_DPA_v1_0
+Rui Wang, Xiaoxiao Ma, Linfeng Zhang, Han Wang, David J Srolovitz, Tongqi Wen, Zhaoxuan Wu
+
+
+16
+W_DPA_v1_0
+Xiaoyang Wang, Yinan Wang, Linfeng Zhang, Fuzhi Dai, Han Wang
+
+
+17
+C12H26_DPA_v1_0
+Jinzhe Zeng, Linfeng Zhang, Han Wang, Tong Zhu
+
+
+18
+HfO2_DPA_v1_0
+Jing Wu, Yuzhi Zhang, Linfeng Zhang, Shi Liu
+
+
+
+Four new datasets for energy &amp; force data
+
+
+
+
+Index
+Dataset name
+Contributors
+
+
+
+19
+Electrolyte
+Mengchao Shi, Yuzhi Zhang
+
+
+20
+Solid_State_Electrolyte
+Mengchao Shi, Yuzhi Zhang
+
+
+21
+Organic_reactions_dataset
+Tong Zhu, Bowen Li
+
+
+22
+CHO-methane-combustion
+Jinzhe Zeng, Liqun Cao, Mingyuan Xu, Tong Zhu, John ZH Zhang
+
+
+
+Seven new datasets in equilibrium state for unsupervised denoising
+
+
+
+
+Index
+Dataset name
+Contributors&#x2F;Link
+
+
+
+1
+AFLOW_MP
+AFLOW, MP
+
+
+2
+MC2D
+Davide Campi, Nicolas Mounet, Marco Gibertini, Giovanni Pizzi, Nicola Marzari, The Materials Cloud 2D database (MC2D), Materials Cloud Archive 2022.84 (2022), doi: 10.24435&#x2F;materialscloud:36-nd.
+
+
+3
+MC3D
+Sebastiaan Huber, Marnik Bercx, Nicolas Hörmann, Martin Uhrin, Giovanni Pizzi, Nicola Marzari, Materials Cloud three-dimensional crystals database (MC3D), Materials Cloud Archive 2022.38 (2022), doi: 10.24435&#x2F;materialscloud:rw-t0.
+
+
+4
+ChemicalSimilarity
+Hai-Chen Wang, Silvana Botti, Miguel A. L. Marques, Finding new crystalline compounds using chemical similarity, Materials Cloud Archive 2021.68 (2021), doi: 10.24435&#x2F;materialscloud:96-09.
+
+
+5
+ClusterIsomer
+Giuseppe Fisicaro, Bastian Schaefer, Jonas A. Finkler, Stefan Goedecker, Principles of isomer stability in small clusters, Materials Cloud Archive 2023.36 (2023), doi: 10.24435&#x2F;materialscloud:46-nr.
+
+
+6
+MolecularCrystal
+Rose Cersonsky, Maria Pakhnova, Edgar Engel, Michele Ceriotti, Lattice energies and relaxed geometries for 2&#39;707 organic molecular crystals and their 3&#39;242 molecular components., Materials Cloud Archive 2023.5 (2023), doi: 10.24435&#x2F;materialscloud:71-21.
+
+
+7
+CALYPSO_database
+Zhenyu Wang, Xiaoshan Luo
+
+
+
+Latest Performance (root mean squared error, RMSE) of the Multi-task Pretrained Model (22 energy force systems + 7 unsupervised denoise systems)
+
+
+  
+    
+      
+      Weight
+      DPA2 (multi-task 18 heads for 1m steps)
+      DPA2 (multi-task 29 heads for 1.84m steps)
+    
+    
+      Energy (meV/atom)
+      Force  (meV/Å)
+      Energy (meV/atom)
+      Force (meV/Å)
+    
+  
+  
+    
+      Alloy
+      2.0
+      36.5
+      169.5
+      32.2
+      160.5
+    
+    
+      Cluster
+      1.0
+      34.4
+      162.5
+      40.6
+      171.0
+    
+    
+      Anode
+      1.0
+      3.3
+      39.8
+      2.5
+      45.0
+    
+    
+      FerroEle
+      1.0
+      4.4
+      44.2
+      1.7
+      47.2
+    
+    
+      AgAu-PBE
+      0.2
+      9.4
+      28.2
+      10.9
+      31.2
+    
+    
+      Cu
+      0.1
+      3.6
+      18.2
+      6.8
+      21.2
+    
+    
+      Sn
+      0.1
+      24.8
+      69.7
+      17.3
+      76.7
+    
+    
+      Ti
+      0.1
+      16.3
+      112.4
+      26.8
+      133.7
+    
+    
+      AlMgCu
+      0.3
+      4.9
+      23.4
+      10.6
+      28.6
+    
+    
+      V
+      0.1
+      13.9
+      110.2
+      16.7
+      121.3
+    
+    
+      W
+      0.1
+      24.6
+      157.9
+      45.8
+      174.0
+    
+    
+      C12H26
+      0.1
+      62.5
+      710.6
+      75.3
+      1486.7
+    
+    
+      SSE-PBE
+      1.0
+      2.1
+      64.0
+      2.2
+      75.7
+    
+    
+      HfO2
+      0.1
+      3.9
+      102.8
+      5.0
+      108.4
+    
+    
+      SemiCond
+      1.0
+      6.5
+      131.9
+      7.2
+      139.8
+    
+    
+      Drug
+      2.0
+      20.6
+      128.9
+      21.8
+      140.6
+    
+    
+      OC2M
+      2.0
+      29.3
+      157.6
+      26.7
+      138.7
+    
+    
+      H2O-PD
+      1.0
+      3.2
+      39.7
+      1.0
+      45.6
+    
+    
+      Weighted sum
+      
+      18.6
+      116.3
+      18.3
+      123.6
+    
+    
+      
+      
+      
+      
+      
+      
+    
+    
+      Electrolyte
+      1.0
+      /
+      /
+      2.9
+      64.3
+    
+    
+      SSE_new
+      1.0
+      /
+      /
+      3.2
+      72.4
+    
+    
+      Organic_reactions
+      1.0
+      /
+      /
+      15.1
+      97.7
+    
+    
+      Methane-combustion
+      1.0
+      /
+      /
+      147.2
+      251.4
+    
+  
+
+]]></content><categories><category>OpenLAM</category></categories></entry><entry><title>The OpenLAM Initiative</title><url>/blog/openlam/</url><content><![CDATA[Peter Thiel once said, &quot;We wanted flying cars, instead we got 140 characters (Twitter).&quot; Over the past decade, we have made great strides at the bit level (internet), but progress at the atomic level (cutting-edge technology) has been relatively slow.
+The accumulation of linguistic data has propelled the development of machine learning and ultimately led to the emergence of Large Language Models (LLMs). With the push from AI, progress at the atomic level is also accelerating. Methods like Deep Potential, by learning quantum mechanical data, have increased the space-time scale of microscopic simulations by several orders of magnitude and have made significant progress in fields like drug design, material design, and chemical engineering.
+The accumulation of quantum mechanical data is gradually covering the entire periodic table, and the Deep Potential team has also begun the practice of the DPA pre-training model. Analogous to the progress of LLMs, we are on the eve of the emergence of a general Large Atom Model (LAM). At the same time, we believe that open-source and openness will play an increasingly important role in the development of LAM.
+Against this backdrop, the core developer team of Deep Potential is launching the OpenLAM Initiative to the community. This plan is still in the draft stage and is set to officially start on January 1, 2024. We warmly and openly welcome opinions and support from all parties.
+The slogan for OpenLAM is &quot;Conquer the Periodic Table!&quot; We hope to provide a new infrastructure for microscale scientific research and drive the transformation of microscale industrial design in fields such as materials, energy, and biopharmaceuticals by establishing an open-source ecosystem around large microscale models. Relevant models, data, and workflows will be consolidated around the AIS Square; related software development will take place in the DeepModeling open-source community. At the same time, we welcome open interaction from different communities in model development, data sharing, evaluation, and testing.
+OpenLAM&#39;s goals for the next three years are: In 2024, to effectively cover the periodic table with first-principles data and achieve a universal property learning capability; in 2025, to combine large-scale experimental characterization data and literature data to achieve a universal cross-modal capability; and in 2026, to realize a target-oriented atomic scale universal generation and planning capability. Ultimately, within 5-10 years, we aim to achieve &quot;Large Atom Embodied Intelligence&quot; for atomic-scale intelligent scientific discovery and synthetic design.
+OpenLAM&#39;s specific plans for 2024 include:
+
+Model Update and Evaluation Report Release:
+
+Starting from January 1, 2024, driven by the Deep Potential team, with participation from all LAM developers welcomed.
+Every three months, a major model version update will take place, with updates that may include model architecture, related data, training strategies, and evaluation test criteria.
+
+
+AIS Cup Competition:
+
+Initiated by the Deep Potential team and supported by the Bohrium Cloud Platform, starting in March 2024 and concluding at the end of the year;
+The goal is to promote the creation of a benchmarking system focused on several application-oriented metrics.
+
+
+Domain Data Contribution:
+
+Seeking collaboration with domain developers to establish &quot;LAM-ready&quot; datasets for pre-training and evaluation.
+Domain datasets for iterative training of the latest models will be updated every three months.
+
+
+Domain Application and Evaluation Workflow Contribution:
+
+The domain application and evaluation workflows will be updated and released every three months.
+
+
+Education and Training:
+
+Planning a series of educational and training events aimed at LAM developers, domain developers, and users to encourage advancement in the field.
+
+
+How to Contact Us:
+
+Direct discussions are encouraged in the DeepModeling community.
+For more complex inquiries, please contact the project lead, Han Wang (王涵, wang_han@iapcm.ac.cn), Linfeng Zhang (张林峰, zhanglf@aisi.ac.cn), for the new future of Science!
+
+
+
+]]></content><categories><category>OpenLAM</category></categories></entry><entry><title>DP Tutorial 1: How to Setup a DeePMD-kit Training within 5 Minutes?</title><url>/blog/tutorial1/</url><content><![CDATA[DeePMD-kit is a software to implement Deep Potential. There is a lot of information on the Internet, but there are not so many tutorials for the new hand, and the official guide is too long. Today, I&#39;ll take you 5 minutes to get started with DeePMD-kit. 
+Let&#39;s take a look at the training process of DeePMD-kit:
+
+graph LR
+A[Prepare data] --&gt; B[Training]
+B --&gt; C[Freeze the model]
+
+
+What? Only three steps? Yes, it&#39;s that simple. 
+
+Preparing data is converting the computational results of DFT to data that can be recognized by the DeePMD-kit. 
+Training is train a Deep Potential model using the DeePMD-kit with data prepared in the previous step. 
+Finally, what we need to do is to freeze the restart file in the training process into a model, in other words is to extract the neural network parameters into a file for subsequent use. I believe you can&#39;t wait to get started. Let&#39;s go!
+
+1. Preparing DataThe data format of the DeePMD-kit is introduced in the official document but seems complex. Don&#39;t worry, I&#39;d like to introduce a data processing tool: dpdata! You can use only one line Python scripts to process data. So easy!
+import dpdatadpdata.LabeledSystem(&#x27;OUTCAR&#x27;).to(&#x27;deepmd/npy&#x27;, &#x27;data&#x27;, set_size=200)
+
+In this example, we converted the computational results of the VASP in the OUTCAR to the data format of the DeePMD-kit and saved in to a directory named data, where npy is the compressed format of the numpy, which is required by the DeePMD-kit training. We assume OUTCAR stores 1000 frames of molecular dynamics trajectory, then where will be 1000 points after converting. set_size=200 means these 1000 points will be divided into 5 subsets, which is named as data/set.000~data/set.004, respectively. The size of each set is 200. In these 5 sets, data/set.000~data/set.003 will be considered as the training set by the DeePMD-kit, and data/set.004 will be considered as the test set. The last set will be considered as the test set by the DeePMD-kit by default. If there is only one set, the set will be both the training set and the test set. (Of course, such test set is meaningless.) 
+2. TrainingIt&#39;s required to prepare an input script to start the DeePMD-kit training. Are you still out of the fear of being dominated by INCAR script?  Don&#39;t worry, it&#39;s much easier to configure the DeePMD-kit than configuring the VASP. First, let&#39;s download an example and save to input.json:
+wget https://raw.githubusercontent.com/deepmodeling/deepmd-kit/v1.3.3/examples/water/train/water_se_a.json -O input.json
+
+The strength of the DeePMD-kit is that the same training parameters are suitable for different systems, so we only need to slightly modify input.json to start training. Here is the first parameter to modify:
+&quot;type_map&quot;:     [&quot;O&quot;, &quot;H&quot;],
+
+In the DeePMD-kit data, each atom type is numbered as an integer starting from 0. The parameter gives an element name to each atom in the numbering system. Here, we can copy from the content of data/type_map.raw. For example,
+&quot;type_map&quot;:    [&quot;A&quot;, &quot;B&quot;,&quot;C&quot;],
+
+Next, we are going to modify the neighbour searching parameter:
+&quot;sel&quot;:       [46, 92],
+
+Each number in this list gives the maximum number of atoms of each type among neighbor atoms of an atom. For example, 46 means there are at most 46 O (type 0) neighbours. Here, our elements were modified to A, B, and C, so this parameters is also required to modify. What to do if you don&#39;t know the maximum number of neighbors? You can be roughly estimate one by the density of the system, or try a number blindly. If it is not big enough, the DeePMD-kit will shoot WARNINGS.  Below we changed it to 
+&quot;sel&quot;:       [64, 64, 64]
+
+In addtion, we need to modify
+&quot;systems&quot;:     [&quot;../data/&quot;],
+
+to
+&quot;systems&quot;:     [&quot;./data/&quot;],
+
+It is because that the directory to write to is ./data/ in the current directory. Here I&#39;d like to introduce the definition of the data system. The DeePMD-kit considers that data with corresponding element types and atomic numbers form a system. Our data is generated from a molecular dynamics simulation and meets this condition, so we can put them into one system. Dpdata works the same way. If data cannot be put into a system, multiple systems is required to be set as a list here:
+&quot;training&quot;: &#123;       &quot;systems&quot;: [&quot;system1&quot;, &quot;system2&quot;]
+
+Finnally, we are likely to modify another two parameters:
+&quot;stop_batch&quot;:   1000000,&quot;batch_size&quot;:   1,
+stop_batch is the numebr of training step using the SGD method of deep learning, and batch_size is the mini-batch size of data in each step.If we want to reduce stop_batch and use batch_size that the DeePMD-kit recommends, we can use
+&quot;stop_batch&quot;:   500000,&quot;batch_size&quot;:   &quot;auto&quot;,
+
+Now we have succesfully set a input file! To start training, we execuate
+dp train input.json
+
+and wait for results. During the training process, we can see lcurve.out to observe the error reduction.Among them, Column 4 and 5 are the test and training errors of energy (normalized by the number of atoms), and Column 6 and 7 are the test and training errors of the force. 
+3. Freeze the ModelAfter training, we can use the following script to freeze the model:
+dp freeze
+
+The default filename of the output model is frozen_model.pb. As so, we have got a good or bad DP model. As for the reliability of this model and how to use it, I will give you a detailed tutorial in the next post.
+]]></content><categories><category>tutorial</category></categories><tags><tag>DeePMD-kit</tag></tags></entry><entry><title>DP Tutorial 2: DeePMD-kit: Install with Conda &amp; Offline Packages &amp; Docker</title><url>/blog/tutorial2/</url><content><![CDATA[Do you prepare to read a long article before clicking the tutorial? Since we can teach you how to setup a DeePMD-kit training in 5 minutes, we can also teach you how to install DeePMD-kit in 5 minutes. The installation manual will be introduced as follows:
+Install with condaAfter you install conda, you can install the CPU version with the following command:
+conda install deepmd-kit=*=*cpu lammps-dp=*=*cpu -c deepmodeling
+
+To install the GPU version containing CUDA 10.1:
+conda install deepmd-kit=*=*gpu lammps-dp=*=*gpu -c deepmodeling
+
+If you want to use the specific version, just replace * with the version:
+conda install deepmd-kit=1.3.3=*cpu lammps-dp=1.3.3=*cpu -c deepmodeling
+
+Install with offline packagesDownload offline packages in the Releases page, or use wget:
+wget https://github.com/deepmodeling/deepmd-kit/releases/download/v1.3.3/deepmd-kit-1.3.3-cuda10.1_gpu-Linux-x86_64.sh -O deepmd-kit-1.3.3-cuda10.1_gpu-Linux-x86_64.sh
+
+Take an example of v1.3.3. Execuate the following commands and just follow the prompts.
+sh deepmd-kit-1.3.1-cuda10.1_gpu-Linux-x86_64.sh
+
+With DockerTo pull the CPU version:
+docker pull ghcr.io&#x2F;deepmodeling&#x2F;deepmd-kit:1.2.2_cpuTo pull the GPU version:
+docker pull ghcr.io&#x2F;deepmodeling&#x2F;deepmd-kit:1.2.2_cuda10.1_gpu
+Tipsdp is the program of DeePMD-kit and lmp is the program of LAMMPS.
+dp -hlmp -h
+
+GPU version has contained CUDA Toolkit. Note that different CUDA versions support different NVIDIA driver versions. See NVIDIA documents for details.
+Don&#39;t hurry up and try such a convenient installation process. But I still want to remind everyone that the above installation methods only support the official version released by DeePMD-kit. If you need to use the devel version, you still need to go through a long compilation process. Please refer to the installation manual.
+]]></content><categories><category>tutorial</category></categories><tags><tag>DeePMD-kit</tag></tags></entry></search>
